@@ -20,12 +20,15 @@ public class Login extends AppCompatActivity {
 
         TextView textCreateAccount = findViewById(R.id.textCreateAccount);
 
+
         textCreateAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 goToRegister(view);
             }
         });
+
+
 
     }
 

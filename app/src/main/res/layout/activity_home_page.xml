@@ -23,26 +23,19 @@
         android:id="@+id/buttonNotification"
         android:layout_width="50dp"
         android:layout_height="55dp"
+        android:layout_marginHorizontal="290dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/edit_notification_home"
         android:backgroundTint="@color/lightBlack"
-        android:drawableLeft="@drawable/baseline_email_24"
+        android:drawableRight="@drawable/baseline_email_24"
         android:padding="15dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="331dp"
-        tools:layout_editor_absoluteY="40dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
-    <View
-        android:id="@+id/containerSearch"
-        android:layout_width="match_parent"
-        android:layout_height="160dp"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="230dp"
-        android:background="@drawable/news_wall"
-        android:backgroundTint="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true">
@@ -50,38 +43,81 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="200dp"
             android:orientation="horizontal">
 
             <View
-                android:id="@+id/containerSearc"
-                android:layout_width="150dp"
-                android:layout_height="178dp"
+                android:id="@+id/containerNews"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="230dp"
                 android:background="@drawable/news_wall"
-                android:backgroundTint="@color/backgoundBlue"
-                tools:ignore="MissingConstraints" />
+                android:backgroundTint="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <View
-                android:id="@+id/co"
+                android:id="@+id/containerStudentNews"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="230dp"
+                android:background="@drawable/news_wall"
+                android:backgroundTint="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="parent"
+
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonHomePageEvents"
                 android:layout_width="150dp"
                 android:layout_height="180dp"
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="230dp"
                 android:background="@drawable/news_wall"
-                android:backgroundTint="@color/backgoundBlue"
-                tools:ignore="MissingConstraints" />
+                android:backgroundTint="@color/backgoundBlue" />
 
-            <View
-                android:id="@+id/com"
+            <Button
+                android:id="@+id/buttonHomePageKits"
                 android:layout_width="150dp"
                 android:layout_height="180dp"
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="230dp"
                 android:background="@drawable/news_wall"
-                android:backgroundTint="@color/backgoundBlue"
-                tools:ignore="MissingConstraints" />
+                android:backgroundTint="@color/backgoundBlue" />
+
+            <Button
+                android:id="@+id/buttonHomePageCuponsAndPartnerships"
+                android:layout_width="150dp"
+                android:layout_height="180dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="230dp"
+                android:background="@drawable/news_wall"
+                android:backgroundTint="@color/backgoundBlue" />
+
+            <Button
+                android:id="@+id/buttonHomePageADD"
+                android:layout_width="150dp"
+                android:layout_height="180dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="230dp"
+                android:background="@drawable/news_wall"
+                android:backgroundTint="@color/backgoundBlue" />
         </LinearLayout>
     </HorizontalScrollView>
 
