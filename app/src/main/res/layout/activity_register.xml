@@ -27,7 +27,6 @@
         android:layout_marginTop="300dp"
         android:background="@drawable/container_login"
         android:backgroundTint="@color/black"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -37,7 +36,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="25dp"
-        android:layout_marginTop="00dp"
+        android:layout_marginTop="0dp"
         android:background="@drawable/container_edit_text_login"
         android:backgroundTint="@color/lightBlack"
         android:drawableLeft="@drawable/baseline_person_24"
