@@ -33,7 +33,7 @@ public class Login extends AppCompatActivity {
     }
 
     private void goToRegister(View view) {
-        Intent in = new Intent(Login.this, Register.class);
+        Intent in = new Intent(Login.this, HomePage.class);
         startActivity(in);
     }
 
