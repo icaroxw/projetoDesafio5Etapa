@@ -1,8 +1,10 @@
-package com.example.projetodesafio;
+package com.example.projetodesafio.models;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.projetodesafio.R;
 
 public class HomePage extends AppCompatActivity {
 

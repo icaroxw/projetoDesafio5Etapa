@@ -1,4 +1,4 @@
-package com.example.projetodesafio;
+package com.example.projetodesafio.models;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.projetodesafio.R;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 
 public class Login extends AppCompatActivity {
