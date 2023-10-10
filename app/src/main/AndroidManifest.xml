@@ -22,7 +22,7 @@
             android:name=".models.Register"
             android:exported="false" />
         <activity
-            android:name=".SplashScreen"
+            android:name=".models.SplashScreen"
             android:theme="@style/Theme.Design.NoActionBar"
             android:exported="true">
             <intent-filter>
