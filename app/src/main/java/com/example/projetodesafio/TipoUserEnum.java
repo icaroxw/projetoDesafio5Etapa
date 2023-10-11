@@ -14,5 +14,4 @@ public enum TipoUserEnum {
     public Integer getTipoUser() {
         return this.tipoUser;
     }
-
 }
