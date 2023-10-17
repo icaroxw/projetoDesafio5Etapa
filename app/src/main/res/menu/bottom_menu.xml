@@ -2,14 +2,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/home"
-        android:icon="@drawable/baseline_home_24"
+        android:id="@+id/buttonHomePageHome"
+        android:icon="@drawable/baseline_home_24_bottom_navigation_view"
         android:title="Home" />
 
     <item
-        android:id="@+id/profile"
-        android:icon="@drawable/baseline_person_24"
-        android:title="Profile"/>
+        android:id="@+id/buttonHomePageEvents"
+        android:icon="@drawable/baseline_calendar_month_24_bottom_navigation_bar"
+        android:title="Events" />
+
+    <item
+        android:id="@+id/buttonHomePageProfile"
+        android:icon="@drawable/baseline_person_24_bottom_navigation_view"
+        android:title="Perfil"/>
 
 
 

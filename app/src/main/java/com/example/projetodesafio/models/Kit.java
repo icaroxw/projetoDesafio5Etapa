@@ -1,4 +1,4 @@
-package com.example.projetodesafio;
+package com.example.projetodesafio.models;
 
 public abstract class Kit {
 

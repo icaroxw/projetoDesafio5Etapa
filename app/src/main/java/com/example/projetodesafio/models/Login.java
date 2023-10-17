@@ -18,9 +18,9 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        //
 
         TextView textCreateAccount = findViewById(R.id.textCreateAccount);
-
 
         textCreateAccount.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -28,8 +28,6 @@ public class Login extends AppCompatActivity {
                 goToRegister(view);
             }
         });
-
-
 
     }
 
