@@ -159,14 +159,14 @@
         </LinearLayout>
     </HorizontalScrollView>
 
-    <me.ibrahimsn.lib.SmoothBottomBar
-        android:id="@+id/NavigationBottomBar"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        app:backgroundColor="@color/lightBlack"
-        app:menu="@menu/bottom_menu"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:ignore="MissingClass" />
+<!--    <me.ibrahimsn.lib.SmoothBottomBar-->
+<!--        android:id="@+id/BottomBar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="60dp"-->
+<!--        app:backgroundColor="@color/lightBlack"-->
+<!--        app:menu="@menu/bottom_menu"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        tools:ignore="MissingClass" />-->
 
 
 

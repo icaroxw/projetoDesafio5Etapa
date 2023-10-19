@@ -18,27 +18,6 @@ public class HomePage extends AppCompatActivity {
         setContentView(R.layout.activity_home_page);
         //
 
-        BottomNavigationView bottomNavigationView = findViewById(R.id.NavigationBottomBar);
-        bottomNavigationView.setSelectedItemId(R.id.buttonHomePageHome);
 
-        bottomNavigationView.setOnItemSelectedListener(item -> {
-
-            if (item.getItemId() == R.id.buttonHomePageHome){
-                return true;
-            }
-            if (item.getItemId() == R.id.buttonHomePageEvents) {
-                startActivity(new Intent(getApplicationContext(), Events.class));
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-                finish();
-                return true;
-            }
-            if (item.getItemId() == R.id.buttonHomePageProfile) {
-                startActivity(new Intent(getApplicationContext(), Profile.class));
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-                finish();
-                return true;
-            }
-            return false;
-        });
     }
 }
