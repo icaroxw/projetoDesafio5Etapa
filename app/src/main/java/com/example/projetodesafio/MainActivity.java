@@ -1,60 +1,49 @@
 package com.example.projetodesafio;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
+
 
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.widget.Toast;
 
-import com.example.projetodesafio.models.HomeFragment;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 
-import me.ibrahimsn.lib.OnItemSelectedListener;
-import me.ibrahimsn.lib.SmoothBottomBar;
 
 public class MainActivity extends AppCompatActivity {
 
-    SmoothBottomBar smoothBottomBar;
 
+//    BottomNavigationView nav;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.frameLayoutMain, new HomeFragment());
-        fragmentTransaction.commit();
-
-        smoothBottomBar.findViewById(R.id.BottomBar);
-
-//        smoothBottomBar.setOnItemSelectedListener(new OnItemSelectedListener() {
+//        nav = findViewById(R.id.bottomNavigationView);
+//
+//        nav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
 //            @Override
-//            public boolean onItemSelect(int i) {
-
-//                if (i == 0) {
-//                    FragmentManager fragmentManager = getSupportFragmentManager();
-//                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//                    fragmentTransaction.replace(R.id.frameLayoutMain, new HomeFragment());
-//                    fragmentTransaction.commit();
+//            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+//
+//                switch (item.getItemId()){
+//
+//                    case R.id.buttonHomePageHome:
+//                        break;
+//                    case R.id.buttonHomePageEvents:
+//                        break;;
+//
+//
 //                }
-//                if (i == 1) {
-//                    FragmentManager fragmentManager = getSupportFragmentManager();
-//                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//                    fragmentTransaction.replace(R.id.frameLayoutMain, new HomeFragment());
-//                    fragmentTransaction.commit();
-//                }
-//                if (i == 2) {
-//                    FragmentManager fragmentManager = getSupportFragmentManager();
-//                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//                    fragmentTransaction.replace(R.id.frameLayoutMain, new HomeFragment());
-//                    fragmentTransaction.commit();
-//                }
+//
+//
+//
 //                return false;
 //            }
 //        });
+
 
     }
 }
