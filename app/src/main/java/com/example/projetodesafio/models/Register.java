@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.projetodesafio.R;
@@ -21,12 +22,22 @@ public class Register extends AppCompatActivity {
         textAlreadyHaveAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                goToLogin(view);
+                goToLogin();
             }
         });
+
+        Button button;
+        button = (Button) findViewById(R.id.buttonRegisterReturn);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goToLogin();
+            }
+        });
+
     }
 
-    private void goToLogin(View view) {
+    private void goToLogin() {
         Intent in = new Intent(Register.this, Login.class);
         startActivity(in);
     }

@@ -25,6 +25,9 @@
             android:name=".models.HomePage"
             android:exported="false" />
         <activity
+            android:name=".models.Login"
+            android:exported="false" />
+        <activity
             android:name=".models.Register"
             android:exported="false" />
         <activity

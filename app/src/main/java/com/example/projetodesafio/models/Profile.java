@@ -6,6 +6,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.projetodesafio.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -42,5 +45,21 @@ public class Profile extends AppCompatActivity {
                 return false;
             }
         });
+
+        Button button;
+        button = (Button) findViewById(R.id.buttonSendLoginProfile);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goToLogin();
+            }
+        });
+
+    }
+
+    private void goToLogin() {
+        Intent in = new Intent(this, Login.class);
+        startActivity(in);
     }
 }
