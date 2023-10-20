@@ -49,7 +49,7 @@
 
 
     <EditText
-        android:id="@+id/editUsername"
+        android:id="@+id/editEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="25dp"
@@ -87,7 +87,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/containerLogin"
         app:layout_constraintStart_toStartOf="@id/containerLogin"
-        app:layout_constraintTop_toBottomOf="@id/editUsername" />
+        app:layout_constraintTop_toBottomOf="@id/editEmail" />
 
     <TextView
         android:id="@+id/textContinueWith"

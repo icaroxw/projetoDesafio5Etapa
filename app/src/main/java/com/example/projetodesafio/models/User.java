@@ -2,7 +2,7 @@ package com.example.projetodesafio.models;
 
 import java.util.Date;
 
-public abstract class User {
+public class User {
 
     private Long id;
     private TipoUserEnum tipoUser;
@@ -18,6 +18,11 @@ public abstract class User {
     public User(String email, String usuario, String senha) {
         this.setEmail(email);
         this.setUsuario(usuario);
+        this.setSenha(senha);
+    }
+
+    public User(String email, String senha) {
+        this.setEmail(email);
         this.setSenha(senha);
     }
 
