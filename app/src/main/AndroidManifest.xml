@@ -25,7 +25,7 @@
             android:name=".models.HomePage"
             android:exported="false" />
         <activity
-            android:name=".models.Login"
+            android:name=".controller.LoginController"
             android:exported="false" />
         <activity
             android:name=".models.Register"

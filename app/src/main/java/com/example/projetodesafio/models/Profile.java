@@ -8,9 +8,9 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 import com.example.projetodesafio.R;
+import com.example.projetodesafio.controller.LoginController;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Profile extends AppCompatActivity {
@@ -59,7 +59,7 @@ public class Profile extends AppCompatActivity {
     }
 
     private void goToLogin() {
-        Intent in = new Intent(this, Login.class);
+        Intent in = new Intent(this, LoginController.class);
         startActivity(in);
     }
 }

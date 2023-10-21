@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.projetodesafio.R;
+import com.example.projetodesafio.controller.LoginController;
 
 public class Register extends AppCompatActivity {
 
@@ -38,7 +39,7 @@ public class Register extends AppCompatActivity {
     }
 
     private void goToLogin() {
-        Intent in = new Intent(Register.this, Login.class);
+        Intent in = new Intent(Register.this, LoginController.class);
         startActivity(in);
     }
 }

@@ -1,4 +1,4 @@
-package com.example.projetodesafio.models;
+package com.example.projetodesafio.controller;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,12 +13,15 @@ import android.widget.Toast;
 
 import com.example.projetodesafio.R;
 import com.example.projetodesafio.dao.LoginDAO;
+import com.example.projetodesafio.models.Profile;
+import com.example.projetodesafio.models.Register;
+import com.example.projetodesafio.models.User;
 import com.example.projetodesafio.repositories.LoginRepositories;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 
 import java.util.Optional;
 
-public class Login extends AppCompatActivity {
+public class LoginController extends AppCompatActivity {
 
     GoogleSignInClient googleSignInClient;
 
@@ -68,9 +71,9 @@ public class Login extends AppCompatActivity {
                 Optional<User> user = loginRepositories.getUserByEmail(email);
 
                 if (user.isPresent() && user.get().getSenha().equals(password)) {
-                    Toast.makeText(Login.this, "Login bem-sucedido!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginController.this, "Login bem-sucedido!", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(Login.this, "Nome de usuário ou senha incorretos.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginController.this, "Nome de usuário ou senha incorretos.", Toast.LENGTH_SHORT).show();
                 }
             }
         });
