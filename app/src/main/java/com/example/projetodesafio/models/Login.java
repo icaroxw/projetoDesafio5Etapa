@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 import com.example.projetodesafio.R;
 import com.example.projetodesafio.dao.LoginDAO;
-import com.example.projetodesafio.dao.UserDAO;
+import com.example.projetodesafio.repositories.LoginRepositories;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 
 import java.util.Optional;
@@ -24,7 +24,7 @@ public class Login extends AppCompatActivity {
 
     private EditText editEmail;
     private EditText editPassword;
-    private UserDAO userDao;
+    private LoginRepositories loginRepositories;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -54,7 +54,7 @@ public class Login extends AppCompatActivity {
 
         /////////Criando a validacao do Login///////////
 
-        userDao = new LoginDAO();
+        loginRepositories = new LoginDAO();
         editEmail = findViewById(R.id.editEmail);
         editPassword = findViewById(R.id.editPassword);
 
@@ -65,12 +65,12 @@ public class Login extends AppCompatActivity {
                 String email = editEmail.getText().toString();
                 String password = editPassword.getText().toString();
 
-                Optional<User> user = userDao.getUserByEmail(email);
+                Optional<User> user = loginRepositories.getUserByEmail(email);
 
                 if (user.isPresent() && user.get().getSenha().equals(password)) {
                     Toast.makeText(Login.this, "Login bem-sucedido!", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(Login.this, "Nome de usuário ou senha incorretos. Login falhou.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Login.this, "Nome de usuário ou senha incorretos.", Toast.LENGTH_SHORT).show();
                 }
             }
         });

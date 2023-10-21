@@ -1,10 +1,10 @@
-package com.example.projetodesafio.dao;
+package com.example.projetodesafio.repositories;
 
 import com.example.projetodesafio.models.User;
 
 import java.util.Optional;
 
-public interface UserDAO {
+public interface LoginRepositories {
 
     Optional<User> getUserByEmail(String email);
 }

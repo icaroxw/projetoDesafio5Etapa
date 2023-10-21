@@ -2,12 +2,13 @@ package com.example.projetodesafio.dao;
 
 
 import com.example.projetodesafio.models.User;
+import com.example.projetodesafio.repositories.LoginRepositories;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class LoginDAO implements UserDAO {
+public class LoginDAO implements LoginRepositories {
 
     private List<User> users;
 
