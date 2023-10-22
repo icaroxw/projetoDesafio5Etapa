@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.example.projetodesafio.R;
 import com.example.projetodesafio.dao.LoginDAO;
+import com.example.projetodesafio.models.ForgotPassword;
 import com.example.projetodesafio.models.Profile;
 import com.example.projetodesafio.models.Register;
 import com.example.projetodesafio.models.User;
@@ -44,6 +45,19 @@ public class LoginController extends AppCompatActivity {
                 goToRegister();
             }
         });
+
+        //
+
+        TextView textForgotPassword = findViewById(R.id.textForgotPassword);
+
+        textForgotPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goToForgotPassword();
+            }
+        });
+
+        //
 
         Button button;
         button = (Button) findViewById(R.id.buttonLoginReturn);
@@ -87,6 +101,11 @@ public class LoginController extends AppCompatActivity {
 
     private void goToProfile() {
         Intent in = new Intent(this, Profile.class);
+        startActivity(in);
+    }
+
+    private void goToForgotPassword() {
+        Intent in = new Intent(this, ForgotPassword.class);
         startActivity(in);
     }
 
