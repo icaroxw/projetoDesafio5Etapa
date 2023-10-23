@@ -1,19 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/black"
     android:layout_gravity="center"
+    android:background="@color/black"
+    android:orientation="vertical"
+    app:layoutDescription="@xml/activity_splash_screen_scene"
     tools:context=".models.SplashScreen">
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/backgroundLayout"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:background="@drawable/bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MotionLayoutInvalidSceneFileReference" />
+
 
     <ImageView
         android:id="@+id/imageLogo"
-        android:layout_width="400dp"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:src="@drawable/dragonn" />
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:src="@drawable/dragonn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</LinearLayout>
+</androidx.constraintlayout.motion.widget.MotionLayout>

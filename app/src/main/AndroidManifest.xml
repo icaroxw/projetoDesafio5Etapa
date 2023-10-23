@@ -13,6 +13,12 @@
         android:theme="@style/Theme.ProjetoDesafio"
         tools:targetApi="31">
         <activity
+            android:name=".models.SuccessNotificationRegister"
+            android:exported="false" />
+        <activity
+            android:name=".models.SuccessNotificationRedefinePassword"
+            android:exported="false" />
+        <activity
             android:name=".models.VerificationPassword"
             android:exported="false" />
         <activity

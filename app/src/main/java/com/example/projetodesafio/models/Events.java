@@ -29,14 +29,14 @@ public class Events extends AppCompatActivity {
 
                 if (item.getItemId() == R.id.menuHome) {
                     startActivity(new Intent(getApplicationContext(), HomePage.class));
-                    overridePendingTransition(0, 0);
+                    overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
                 }
                 if (item.getItemId() == R.id.menuEvents) {
                     return true;
                 }
                 if (item.getItemId() == R.id.menuProfile) {
                     startActivity(new Intent(getApplicationContext(), Profile.class));
-                    overridePendingTransition(0, 0);
+                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                     return true;
                 }
 

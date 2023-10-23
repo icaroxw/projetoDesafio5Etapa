@@ -25,6 +25,8 @@ public class VerificationPassword extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 goToRedefinePassword();
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+
             }
         });
 
@@ -36,6 +38,7 @@ public class VerificationPassword extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 goToForgotPassword();
+                overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
             }
         });
 

@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.projetodesafio.R;
-import com.example.projetodesafio.controller.LoginController;
 
 public class RedefinePassword extends Activity {
 
@@ -19,13 +18,14 @@ public class RedefinePassword extends Activity {
         setContentView(R.layout.activity_redefine_password);
         //
 
-        Button button;
-        button = (Button) findViewById(R.id.buttonSendRedefinePassword);
+        Button buttonSendRedefinePassword;
+        buttonSendRedefinePassword = (Button) findViewById(R.id.buttonSendRedefinePassword);
 
-        button.setOnClickListener(new View.OnClickListener() {
+        buttonSendRedefinePassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                goToLogin();
+                goToSucessNotification();
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });
 
@@ -37,13 +37,14 @@ public class RedefinePassword extends Activity {
             @Override
             public void onClick(View view) {
                 goToVerificationPassword();
+                overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
             }
         });
 
     }
 
-    private void goToLogin() {
-        Intent in = new Intent(this, LoginController.class);
+    private void goToSucessNotification() {
+        Intent in = new Intent(this, SuccessNotificationRedefinePassword.class);
         startActivity(in);
     }
 

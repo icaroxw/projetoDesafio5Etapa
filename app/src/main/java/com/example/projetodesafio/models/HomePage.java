@@ -36,12 +36,12 @@ public class HomePage extends AppCompatActivity {
                 }
                 if (item.getItemId() == R.id.menuEvents) {
                     startActivity(new Intent(getApplicationContext(), Events.class));
-                    overridePendingTransition(0, 0);
+                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                     return true;
                 }
                 if (item.getItemId() == R.id.menuProfile) {
                     startActivity(new Intent(getApplicationContext(), Profile.class));
-                    overridePendingTransition(0, 0);
+                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                     return true;
                 }
 

@@ -43,6 +43,7 @@ public class LoginController extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 goToRegister();
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });
 
@@ -54,17 +55,19 @@ public class LoginController extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 goToForgotPassword();
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });
 
         //
 
-        Button button;
-        button = (Button) findViewById(R.id.buttonLoginReturn);
-        button.setOnClickListener(new View.OnClickListener() {
+        Button buttonLoginReturn;
+        buttonLoginReturn = (Button) findViewById(R.id.buttonLoginReturn);
+        buttonLoginReturn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 goToProfile();
+                overridePendingTransition(R.anim.slide_in_top, R.anim.slide_out_bottom);
             }
         });
 
@@ -88,6 +91,8 @@ public class LoginController extends AppCompatActivity {
                     Toast.makeText(LoginController.this, "Login bem-sucedido!", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(LoginController.this, "Nome de usuário ou senha incorretos.", Toast.LENGTH_SHORT).show();
+
+                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 }
             }
         });

@@ -32,11 +32,11 @@ public class Profile extends AppCompatActivity {
 
                 if (item.getItemId() == R.id.menuHome) {
                     startActivity(new Intent(getApplicationContext(), HomePage.class));
-                    overridePendingTransition(0, 0);
+                    overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
                 }
                 if (item.getItemId() == R.id.menuEvents) {
                     startActivity(new Intent(getApplicationContext(), Events.class));
-                    overridePendingTransition(0, 0);
+                    overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
                 }
                 if (item.getItemId() == R.id.menuProfile) {
                     return true;
@@ -46,13 +46,14 @@ public class Profile extends AppCompatActivity {
             }
         });
 
-        Button button;
-        button = (Button) findViewById(R.id.buttonSendLoginProfile);
+        Button buttonSendLoginProfile;
+        buttonSendLoginProfile = (Button) findViewById(R.id.buttonSendLoginProfile);
 
-        button.setOnClickListener(new View.OnClickListener() {
+        buttonSendLoginProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 goToLogin();
+                overridePendingTransition(R.anim.slide_in_top, R.anim.slide_out_bottom);
             }
         });
 
