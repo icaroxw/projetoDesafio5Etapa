@@ -11,4 +11,5 @@
     <color name="lightGrey">#FAFAFA</color>
     <color name="gold">#ffd221</color>
     <color name="yellow">#FFDA47</color>
+    <color name="red">#FF0000</color>
 </resources>

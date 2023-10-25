@@ -33,8 +33,7 @@
         app:layout_constraintBottom_toTopOf="@id/horizontalScrollViewNewsWall"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <HorizontalScrollView
         android:id="@+id/horizontalScrollViewNewsWall"
@@ -54,56 +53,115 @@
 
             <FrameLayout
                 android:id="@+id/frameLayoutAthleticNewsWall"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_width="320dp"
+                android:layout_height="160dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/news_wall"
+                android:backgroundTint="@color/lightBlue"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
 
-                <View
-                    android:id="@+id/containerAthleticNewsWall"
-                    android:layout_width="320dp"
-                    android:layout_height="160dp"
-                    android:layout_marginStart="20dp"
-                    android:background="@drawable/news_wall"
-                    android:backgroundTint="@color/lightBlack" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:scaleType="center"
+                    android:src="@drawable/newswallpng" />
 
                 <TextView
-                    android:id="@+id/textAthleticNewsWall"
-                    android:layout_width="300dp"
-                    android:layout_height="140dp"
-                    android:layout_marginStart="30dp"
+                    android:layout_width="140dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="160dp"
                     android:layout_marginTop="10dp"
-                    android:text="Mural de notícias das atléticas"
+                    android:text="Notícias da Atlética"
+                    android:textAlignment="center"
                     android:textColor="@color/white"
-                    android:textSize="40dp" />
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="180dp"
+                    android:layout_marginTop="85dp"
+                    android:background="@color/white" />
+
+                <Button
+                    android:id="@+id/buttonAthleticNewsWall"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="180dp"
+                    android:layout_marginTop="85dp"
+                    android:background="@drawable/button_style_news_wall"
+                    android:backgroundTint="@color/white"
+                    android:clickable="false"
+                    android:text="Ver agora"
+                    android:textColor="@color/lightBlue"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/containerLogin"
+                    app:layout_constraintEnd_toEndOf="@id/containerLogin"
+                    app:layout_constraintStart_toStartOf="@id/containerLogin" />
             </FrameLayout>
 
             <FrameLayout
                 android:id="@+id/frameLayoutUsersNewsWall"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="20dp">
+                android:layout_width="320dp"
+                android:layout_height="160dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/news_wall"
+                android:backgroundTint="@color/lightBlue"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
 
-                <View
-                    android:id="@+id/containerUsersNewsWall"
-                    android:layout_width="320dp"
-                    android:layout_height="160dp"
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_marginStart="10dp"
-                    android:background="@drawable/news_wall"
-                    android:backgroundTint="@color/lightBlack"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    android:scaleType="center"
+                    android:src="@drawable/newswallpng" />
 
                 <TextView
-                    android:id="@+id/textUsersNewsWall"
-                    android:layout_width="300dp"
-                    android:layout_height="140dp"
-                    android:layout_marginStart="30dp"
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="160dp"
                     android:layout_marginTop="10dp"
-                    android:text="Mural de notícias dos usuários"
+                    android:text="Notícias dos Usuários"
+                    android:textAlignment="center"
                     android:textColor="@color/white"
-                    android:textSize="40dp" />
-            </FrameLayout>
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
 
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="180dp"
+                    android:layout_marginTop="85dp"
+                    android:background="@color/white" />
+
+                <Button
+                    android:id="@+id/buttonUsersNewsWall"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="180dp"
+                    android:layout_marginTop="85dp"
+                    android:background="@drawable/button_style_news_wall"
+                    android:backgroundTint="@color/white"
+                    android:clickable="false"
+                    android:text="Ver agora"
+                    android:textColor="@color/lightBlue"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/containerLogin"
+                    app:layout_constraintEnd_toEndOf="@id/containerLogin"
+                    app:layout_constraintStart_toStartOf="@id/containerLogin" />
+            </FrameLayout>
 
         </LinearLayout>
     </HorizontalScrollView>
@@ -123,38 +181,154 @@
             android:layout_weight="1"
             android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/buttonHomePageEvents"
+            <LinearLayout
+                android:id="@+id/LinearLayoutHomePageEvents"
                 android:layout_width="150dp"
                 android:layout_height="180dp"
                 android:layout_marginStart="20dp"
                 android:background="@drawable/news_wall"
-                android:backgroundTint="@color/lightBlack" />
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
 
-            <Button
-                android:id="@+id/buttonHomePageKits"
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/baseline_calendar_month_24_home_page" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Eventos"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearLayoutHomePageKits"
                 android:layout_width="150dp"
                 android:layout_height="180dp"
                 android:layout_marginStart="20dp"
                 android:background="@drawable/news_wall"
-                android:backgroundTint="@color/lightBlack" />
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
 
-            <Button
-                android:id="@+id/buttonHomePageCuponsAndPartnerships"
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/baseline_shopping_bag_24_home_page" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kits"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearLayoutHomePageCuponsAndPartnerships"
+                android:layout_width="150dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/news_wall"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/baseline_card_giftcard_24_home_page" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cupons e parcerias"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearLayoutHomeAboutUs"
+                android:layout_width="150dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/news_wall"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/baseline_people_outline_24_home_page" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="Sobre Nós"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearLayoutHomeEditUsers"
                 android:layout_width="150dp"
                 android:layout_height="180dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
                 android:background="@drawable/news_wall"
-                android:backgroundTint="@color/lightBlack" />
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
 
-            <!--            <Button-->
-            <!--                android:id="@+id/buttonHomePageADD"-->
-            <!--                android:layout_width="150dp"-->
-            <!--                android:layout_height="180dp"-->
-            <!--                android:layout_marginHorizontal="20dp"-->
-            <!--                android:background="@drawable/news_wall"-->
-            <!--                android:backgroundTint="@color/backgoundBlue" />-->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/baseline_person_add_alt_24_home_page" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="Editar usuários"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
         </LinearLayout>
     </HorizontalScrollView>
 

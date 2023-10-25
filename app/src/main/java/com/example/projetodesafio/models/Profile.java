@@ -3,7 +3,11 @@ package com.example.projetodesafio.models;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
+import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,10 +21,15 @@ public class Profile extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
 
+    Button buttonSendAboutApp;
+    Dialog mDialog;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+        //
+
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setSelectedItemId(R.id.menuProfile);
@@ -46,6 +55,8 @@ public class Profile extends AppCompatActivity {
             }
         });
 
+        //
+
         Button buttonSendLoginProfile;
         buttonSendLoginProfile = (Button) findViewById(R.id.buttonSendLoginProfile);
 
@@ -57,6 +68,7 @@ public class Profile extends AppCompatActivity {
             }
         });
 
+         //
     }
 
     private void goToLogin() {
