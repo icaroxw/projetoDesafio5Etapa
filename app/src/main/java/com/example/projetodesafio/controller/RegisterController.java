@@ -73,7 +73,7 @@ public class RegisterController extends AppCompatActivity {
                 email = String.valueOf(editTextEmail.getText());
                 password = String.valueOf(editTextPassword.getText());
 
-                if(user.equals(password)) {
+                if((!user.isEmpty() && !password.isEmpty()) && user.equals(password)) {
                     Toast.makeText(RegisterController.this, "A senha não pode ser igual ao nome de usuário", Toast.LENGTH_SHORT).show();
                     return;
                 }
