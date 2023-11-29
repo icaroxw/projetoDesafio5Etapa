@@ -11,5 +11,5 @@ public interface IRegisterRepositories {
         void onFailure(String errorMessage);
     }
 
-    void registerWithEmailAndPassword(String email, String password, ILoginRepositories.AuthCallback callback);
+    void registerWithEmailAndPassword(String email, String password, AuthCallback callback);
 }

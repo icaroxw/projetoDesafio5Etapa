@@ -16,6 +16,7 @@ import com.example.projetodesafio.models.dao.RegisterDAO;
 import com.example.projetodesafio.models.Profile;
 import com.example.projetodesafio.models.SuccessNotificationRegister;
 import com.example.projetodesafio.repositories.ILoginRepositories;
+import com.example.projetodesafio.repositories.IRegisterRepositories;
 import com.google.android.material.textfield.TextInputEditText;
 
 public class RegisterController extends AppCompatActivity {
@@ -78,7 +79,7 @@ public class RegisterController extends AppCompatActivity {
                     return;
                 }
 
-                registerDAO.registerWithEmailAndPassword(email, password, new ILoginRepositories.AuthCallback() {
+                registerDAO.registerWithEmailAndPassword(email, password, new IRegisterRepositories.AuthCallback() {
                     @Override
                     public void onSuccess() {
                         goToSucessNotificationRegister();
