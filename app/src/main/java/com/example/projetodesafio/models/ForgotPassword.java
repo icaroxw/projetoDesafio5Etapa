@@ -60,22 +60,19 @@ public class ForgotPassword extends AppCompatActivity {
             public void onClick(View view) {
                 String email = String.valueOf(editTextEmail.getText());
                 if (TextUtils.isEmpty(email)) {
-                    editTextEmail.setError("Coloque o email");
+                    editTextEmail.setError("Informe o e-mail");
                 } else {
                     //o Firebase Authentication envia automaticamente um e-mail de redefinição de senha padrão para o usuário com um link de redefinição incorporado. O conteúdo do e-mail é gerado pelo Firebase e não pode ser personalizado
                     mAuth.sendPasswordResetEmail(email).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
-                            goToLogin();
-                            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                            if(task.isSuccessful()) {
+                                goToLogin();
+                                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                            } else {
+                                editTextEmail.setError("E-mail inválido!");
+                            }
                         }
-                    }).addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
-                            Toast.makeText(ForgotPassword.this, "Erro", Toast.LENGTH_SHORT).show();
-
-                        }
-
                     });
                 }
             }
