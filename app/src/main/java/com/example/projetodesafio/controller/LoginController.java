@@ -85,15 +85,6 @@ public class LoginController extends AppCompatActivity {
                 email = String.valueOf(editTextEmail.getText());
                 password = String.valueOf(editTextPassword.getText());
 
-                if (TextUtils.isEmpty(email)) {
-                    Toast.makeText(LoginController.this, "Coloque o email", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                if (TextUtils.isEmpty(password)) {
-                    Toast.makeText(LoginController.this, "Coloque a senha", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-
                 loginDAO.signInWithEmailAndPassword(email, password, new ILoginRepositories.AuthCallback() {
                     @Override
                     public void onSuccess() {
