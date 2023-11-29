@@ -73,19 +73,10 @@ public class RegisterController extends AppCompatActivity {
                 email = String.valueOf(editTextEmail.getText());
                 password = String.valueOf(editTextPassword.getText());
 
-                if (TextUtils.isEmpty(user)) {
-                    Toast.makeText(RegisterController.this, "Coloque o usuário", Toast.LENGTH_SHORT).show();
+                if(user.equals(password)) {
+                    Toast.makeText(RegisterController.this, "A senha não pode ser igual ao nome de usuário", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if (TextUtils.isEmpty(email)) {
-                    Toast.makeText(RegisterController.this, "Coloque o email", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                if (TextUtils.isEmpty(password)) {
-                    Toast.makeText(RegisterController.this, "Coloque a senha", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-
 
                 registerDAO.registerWithEmailAndPassword(email, password, new ILoginRepositories.AuthCallback() {
                     @Override
@@ -119,4 +110,3 @@ public class RegisterController extends AppCompatActivity {
         startActivity(in);
     }
 }
-

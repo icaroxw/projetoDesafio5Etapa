@@ -14,16 +14,32 @@ public class RegisterDAO implements IRegisterRepositories {
 
     @Override
     public void registerWithEmailAndPassword(String email, String password, ILoginRepositories.AuthCallback callback) {
-        mAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            callback.onSuccess();
-                        } else {
-                            callback.onFailure("Falha ao realizar o cadastro.");
+        try {
+            mAuth.createUserWithEmailAndPassword(email, password)
+                    .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
+                                callback.onSuccess();
+                            } else {
+                                String response = task.getException().toString();
+                                callback.onFailure(errorsOptions(response));
+                            }
                         }
-                    }
-                });
+                    });
+        } catch(Exception e) {
+            callback.onFailure(errorsOptions(e.toString()));
+        }
+
+    }
+
+    private String errorsOptions(String response) {
+        if(response.contains("The email address is badly formatted")) {
+            return "Insira um e-mail válido";
+        } else if(response.contains("Password should be at least 6 characters")) {
+            return "A senha precisa conter no mínimo 6 caracteres";
+        } else if(response.contains("Given String is empty or null")) {
+            return "Os campos não podem ser nulos";
+        } else return "";
     }
 }
