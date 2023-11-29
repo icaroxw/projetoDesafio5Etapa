@@ -40,6 +40,8 @@ public class RegisterDAO implements IRegisterRepositories {
             return "A senha precisa conter no mínimo 6 caracteres";
         } else if(response.contains("Given String is empty or null")) {
             return "Os campos não podem ser nulos";
+        } else if(response.contains("The email address is already in use by another account")) {
+            return "O e-mail informado já está sendo utilizado por outra conta";
         } else return "";
     }
 }
