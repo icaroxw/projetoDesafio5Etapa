@@ -50,7 +50,7 @@
             android:name=".controller.LoginController"
             android:exported="false" />
         <activity
-            android:name=".models.Register"
+            android:name=".controller.RegisterController"
             android:exported="false" />
         <activity
             android:name=".models.SplashScreen"

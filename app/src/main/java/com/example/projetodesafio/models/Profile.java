@@ -16,13 +16,13 @@ import android.widget.Button;
 import com.example.projetodesafio.R;
 import com.example.projetodesafio.controller.LoginController;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class Profile extends AppCompatActivity {
+    private FirebaseAuth mAuth = FirebaseAuth.getInstance();
 
-    BottomNavigationView bottomNavigationView;
-
-    Button buttonSendAboutApp;
-    Dialog mDialog;
+    private BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,22 +57,43 @@ public class Profile extends AppCompatActivity {
 
         //
 
-        Button buttonSendLoginProfile;
+        Button buttonSendLoginProfile, buttonSendLogoutProfile;
         buttonSendLoginProfile = (Button) findViewById(R.id.buttonSendLoginProfile);
+        buttonSendLogoutProfile = findViewById(R.id.buttonSendLogoutProfile);
+
+        // altera a visibilidade do botao caso o usuario esteja logado
+
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if (currentUser != null) {
+            buttonSendLogoutProfile.setVisibility(View.VISIBLE);
+        }else {
+            buttonSendLoginProfile.setVisibility(View.VISIBLE);
+        }
+
 
         buttonSendLoginProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                    goToLogin();
+                    overridePendingTransition(R.anim.slide_in_top, R.anim.slide_out_bottom);
+                }
+            });
+
+        buttonSendLogoutProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseAuth.getInstance().signOut();
                 goToLogin();
                 overridePendingTransition(R.anim.slide_in_top, R.anim.slide_out_bottom);
+
             }
         });
 
-         //
-    }
 
-    private void goToLogin() {
-        Intent in = new Intent(this, LoginController.class);
-        startActivity(in);
+        }
+
+        private void goToLogin () {
+            Intent in = new Intent(this, LoginController.class);
+            startActivity(in);
+        }
     }
-}

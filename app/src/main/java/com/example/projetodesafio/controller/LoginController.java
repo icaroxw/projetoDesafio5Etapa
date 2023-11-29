@@ -1,36 +1,34 @@
 package com.example.projetodesafio.controller;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.projetodesafio.R;
-import com.example.projetodesafio.dao.LoginDAO;
+import com.example.projetodesafio.models.dao.LoginDAO;
 import com.example.projetodesafio.models.ForgotPassword;
 import com.example.projetodesafio.models.Profile;
-import com.example.projetodesafio.models.Register;
-import com.example.projetodesafio.models.User;
-import com.example.projetodesafio.repositories.LoginRepositories;
+import com.example.projetodesafio.repositories.ILoginRepositories;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
-
-import java.util.Optional;
+import com.google.android.material.textfield.TextInputEditText;
 
 public class LoginController extends AppCompatActivity {
 
+    private LoginDAO loginDAO;
     GoogleSignInClient googleSignInClient;
 
-    private EditText editEmail;
-    private EditText editPassword;
-    private LoginRepositories loginRepositories;
+    private TextInputEditText editTextEmail, editTextPassword;
+    private Button buttonLoginReturn;
+    private Button buttonLogin;
 
-    @SuppressLint("MissingInflatedId")
+    @SuppressLint({"MissingInflatedId", "WrongViewCast"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,7 +59,6 @@ public class LoginController extends AppCompatActivity {
 
         //
 
-        Button buttonLoginReturn;
         buttonLoginReturn = (Button) findViewById(R.id.buttonLoginReturn);
         buttonLoginReturn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,33 +71,47 @@ public class LoginController extends AppCompatActivity {
 
         /////////Criando a validacao do Login///////////
 
-        loginRepositories = new LoginDAO();
-        editEmail = findViewById(R.id.editEmail);
-        editPassword = findViewById(R.id.editPassword);
+        loginDAO = new LoginDAO();
 
-        Button buttonSendLogin = findViewById(R.id.buttonSendLogin);
-        buttonSendLogin.setOnClickListener(new View.OnClickListener() {
+        editTextEmail = findViewById(R.id.editEmail);
+        editTextPassword = findViewById(R.id.editPassword);
+
+        buttonLogin = findViewById(R.id.buttonSendLogin);
+
+        buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String email = editEmail.getText().toString();
-                String password = editPassword.getText().toString();
+                String email, password;
+                email = String.valueOf(editTextEmail.getText());
+                password = String.valueOf(editTextPassword.getText());
 
-                Optional<User> user = loginRepositories.getUserByEmail(email);
-
-                if (user.isPresent() && user.get().getSenha().equals(password)) {
-                    Toast.makeText(LoginController.this, "Login bem-sucedido!", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(LoginController.this, "Nome de usuário ou senha incorretos.", Toast.LENGTH_SHORT).show();
-
-                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                if (TextUtils.isEmpty(email)) {
+                    Toast.makeText(LoginController.this, "Coloque o email", Toast.LENGTH_SHORT).show();
+                    return;
                 }
+                if (TextUtils.isEmpty(password)) {
+                    Toast.makeText(LoginController.this, "Coloque a senha", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                loginDAO.signInWithEmailAndPassword(email, password, new ILoginRepositories.AuthCallback() {
+                    @Override
+                    public void onSuccess() {
+                        goToProfile();
+                        overridePendingTransition(R.anim.slide_in_top, R.anim.slide_out_bottom);
+                    }
+
+                    @Override
+                    public void onFailure(String errorMessage) {
+                        Toast.makeText(LoginController.this, errorMessage, Toast.LENGTH_SHORT).show();
+                    }
+                });
             }
         });
-
     }
 
     private void goToRegister() {
-        Intent in = new Intent(this, Register.class);
+        Intent in = new Intent(this, RegisterController.class);
         startActivity(in);
     }
 

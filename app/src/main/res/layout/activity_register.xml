@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".models.Register">
+    tools:context=".controller.RegisterController">
 
     <ImageView
         android:id="@+id/imageLogo"
@@ -45,7 +45,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
+
+    <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/editUsernameRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -67,7 +68,7 @@
         app:layout_constraintStart_toStartOf="@id/containerLogin"
         app:layout_constraintTop_toTopOf="@id/containerLogin" />
 
-    <EditText
+    <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/editEmailRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -90,7 +91,7 @@
         app:layout_constraintStart_toStartOf="@id/containerLogin"
         app:layout_constraintTop_toBottomOf="@id/editUsernameRegister" />
 
-    <EditText
+    <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/editPasswordRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

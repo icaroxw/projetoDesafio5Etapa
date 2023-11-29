@@ -48,7 +48,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-    <EditText
+    <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/editEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -67,7 +67,7 @@
         app:layout_constraintStart_toStartOf="@id/containerLogin"
         app:layout_constraintTop_toTopOf="@id/containerLogin" />
 
-    <EditText
+    <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/editPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -88,6 +88,7 @@
         app:layout_constraintEnd_toEndOf="@id/containerLogin"
         app:layout_constraintStart_toStartOf="@id/containerLogin"
         app:layout_constraintTop_toBottomOf="@id/editEmail" />
+
 
     <TextView
         android:id="@+id/textContinueWith"
