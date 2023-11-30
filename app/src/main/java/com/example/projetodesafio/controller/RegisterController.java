@@ -78,7 +78,7 @@ public class RegisterController extends AppCompatActivity {
                     Toast.makeText(RegisterController.this, "A senha não pode ser igual ao nome de usuário", Toast.LENGTH_SHORT).show();
                     return;
                 } else if(user.isEmpty()) {
-                    Toast.makeText(RegisterController.this, "O nome de usuário não pode ser nulo", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterController.this, "Os campos não podem ser nulos", Toast.LENGTH_SHORT).show();
                     return;
                 }
 

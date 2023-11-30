@@ -3,7 +3,6 @@ package com.example.projetodesafio.controller;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -13,7 +12,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.projetodesafio.R;
 import com.example.projetodesafio.models.dao.LoginDAO;
-import com.example.projetodesafio.models.ForgotPassword;
 import com.example.projetodesafio.models.Profile;
 import com.example.projetodesafio.repositories.ILoginRepositories;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -112,7 +110,7 @@ public class LoginController extends AppCompatActivity {
     }
 
     private void goToForgotPassword() {
-        Intent in = new Intent(this, ForgotPassword.class);
+        Intent in = new Intent(this, ForgotPasswordController.class);
         startActivity(in);
     }
 

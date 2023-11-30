@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.projetodesafio.R;
+import com.example.projetodesafio.controller.ForgotPasswordController;
 
 public class VerificationPassword extends AppCompatActivity {
 
@@ -49,7 +50,7 @@ public class VerificationPassword extends AppCompatActivity {
         startActivity(in);
     }
     private void goToForgotPassword() {
-        Intent in = new Intent(VerificationPassword.this, ForgotPassword.class);
+        Intent in = new Intent(VerificationPassword.this, ForgotPasswordController.class);
         startActivity(in);
     }
 }

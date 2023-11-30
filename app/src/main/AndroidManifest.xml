@@ -29,7 +29,7 @@
             android:name=".models.VerificationPassword"
             android:exported="false" />
         <activity
-            android:name=".models.ForgotPassword"
+            android:name=".controller.ForgotPasswordController"
             android:exported="false" />
         <activity
             android:name=".models.RedefinePassword"
