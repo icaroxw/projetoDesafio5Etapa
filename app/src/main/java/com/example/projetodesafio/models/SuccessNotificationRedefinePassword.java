@@ -23,14 +23,14 @@ public class SuccessNotificationRedefinePassword extends AppCompatActivity {
         buttonSendReturnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                goToLogin();
+                goToProfile();
                 overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
             }
         });
     }
 
-    private void goToLogin() {
-        Intent in = new Intent(SuccessNotificationRedefinePassword.this, LoginController.class);
+    private void goToProfile() {
+        Intent in = new Intent(SuccessNotificationRedefinePassword.this, Profile.class);
         startActivity(in);
     }
 }

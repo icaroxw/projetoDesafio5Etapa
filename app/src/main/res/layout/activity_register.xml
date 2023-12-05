@@ -34,7 +34,7 @@
         tools:ignore="MissingConstraints" />
 
     <View
-        android:id="@+id/containerLogin"
+        android:id="@+id/containerProfileEdit"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginHorizontal="20dp"
@@ -63,9 +63,9 @@
         android:textColorHint="@color/grey"
         android:textSize="14dp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@id/containerLogin"
-        app:layout_constraintStart_toStartOf="@id/containerLogin"
-        app:layout_constraintTop_toTopOf="@id/containerLogin" />
+        app:layout_constraintEnd_toEndOf="@id/containerProfileEdit"
+        app:layout_constraintStart_toStartOf="@id/containerProfileEdit"
+        app:layout_constraintTop_toTopOf="@id/containerProfileEdit" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/editEmailRegister"
@@ -86,32 +86,44 @@
         android:textColorHint="@color/grey"
         android:textSize="14dp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@id/containerLogin"
-        app:layout_constraintStart_toStartOf="@id/containerLogin"
+        app:layout_constraintEnd_toEndOf="@id/containerProfileEdit"
+        app:layout_constraintStart_toStartOf="@id/containerProfileEdit"
         app:layout_constraintTop_toBottomOf="@id/editUsernameRegister" />
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editPasswordRegister"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutRegisterPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="25dp"
-        android:layout_marginVertical="10dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/container_edit_text_login"
-        android:backgroundTint="@color/lightBlack"
-        android:drawableLeft="@drawable/baseline_lock_24"
         android:drawablePadding="10dp"
         android:elevation="1dp"
         android:hint="Senha"
-        android:inputType="textPassword"
-        android:padding="18dp"
-        android:textColor="@color/white"
-        android:textColorHint="@color/grey"
-        android:textSize="14dp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@id/containerLogin"
-        app:layout_constraintStart_toStartOf="@id/containerLogin"
-        app:layout_constraintTop_toBottomOf="@id/editEmailRegister" />
+        android:textColorHint="@android:color/transparent"
+        app:hintAnimationEnabled="false"
+        app:hintTextColor="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="@id/containerProfileEdit"
+        app:layout_constraintStart_toStartOf="@id/containerProfileEdit"
+        app:layout_constraintTop_toBottomOf="@id/editEmailRegister"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/grey">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editPasswordRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/container_edit_text_login"
+            android:backgroundTint="@color/lightBlack"
+            android:drawableStart="@drawable/baseline_lock_24"
+            android:drawablePadding="10dp"
+            android:hint="Senha"
+            android:inputType="textPassword"
+            android:padding="18dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/grey"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <CheckBox
         android:id="@+id/checkboxKeepMeLogIn"
@@ -123,10 +135,10 @@
         android:text="Mantenha-me conectado"
         android:textColor="@color/white"
         android:theme="@style/colored_checkBox"
-        app:layout_constraintEnd_toEndOf="@id/containerLogin"
+        app:layout_constraintEnd_toEndOf="@id/containerProfileEdit"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@id/containerLogin"
-        app:layout_constraintTop_toBottomOf="@id/editPasswordRegister" />
+        app:layout_constraintStart_toStartOf="@id/containerProfileEdit"
+        app:layout_constraintTop_toBottomOf="@id/textInputLayoutRegisterPassword" />
 
     <CheckBox
         android:id="@+id/checkboxReceiveEmails"
@@ -138,9 +150,9 @@
         android:text="Enviar e-mail sobre ofertas especias"
         android:textColor="@color/white"
         android:theme="@style/colored_checkBox"
-        app:layout_constraintEnd_toEndOf="@id/containerLogin"
+        app:layout_constraintEnd_toEndOf="@id/containerProfileEdit"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@id/containerLogin"
+        app:layout_constraintStart_toStartOf="@id/containerProfileEdit"
         app:layout_constraintTop_toBottomOf="@id/checkboxKeepMeLogIn" />
 
     <Button
@@ -157,9 +169,9 @@
         android:textColor="@color/white"
         android:textSize="22dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@id/containerLogin"
-        app:layout_constraintEnd_toEndOf="@id/containerLogin"
-        app:layout_constraintStart_toStartOf="@id/containerLogin" />
+        app:layout_constraintBottom_toBottomOf="@id/containerProfileEdit"
+        app:layout_constraintEnd_toEndOf="@id/containerProfileEdit"
+        app:layout_constraintStart_toStartOf="@id/containerProfileEdit" />
 
     <TextView
         android:id="@+id/textAlreadyHaveAccount"
@@ -172,8 +184,8 @@
         android:textColor="@color/backgoundBlue"
         android:textSize="13dp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@id/containerLogin"
-        app:layout_constraintStart_toStartOf="@id/containerLogin"
+        app:layout_constraintEnd_toEndOf="@id/containerProfileEdit"
+        app:layout_constraintStart_toStartOf="@id/containerProfileEdit"
         app:layout_constraintTop_toBottomOf="@id/buttonSendRegister" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

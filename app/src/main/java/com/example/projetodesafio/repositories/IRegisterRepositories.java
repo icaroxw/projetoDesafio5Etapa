@@ -12,4 +12,6 @@ public interface IRegisterRepositories {
     }
 
     void registerWithEmailAndPassword(String email, String password, AuthCallback callback);
+
+    void saveUserData(String nome, String email, String password);
 }

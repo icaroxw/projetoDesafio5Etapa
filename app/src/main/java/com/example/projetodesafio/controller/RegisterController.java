@@ -86,6 +86,7 @@ public class RegisterController extends AppCompatActivity {
                     @Override
                     public void onSuccess() {
                         goToSucessNotificationRegister();
+                        registerDAO.saveUserData(user,email,password);
                         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                     }
 
@@ -97,6 +98,12 @@ public class RegisterController extends AppCompatActivity {
                 });
             }
         });
+
+        //
+
+
+
+
     }
 
     private void goToLogin() {

@@ -9,9 +9,24 @@
     android:layout_marginBottom="60dp"
     android:background="@drawable/aboutpopupbackground">
 
+    <TextView
+        android:id="@+id/TextViewQuadrodeAviso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Quadro de Avisos"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -21,19 +36,6 @@
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Quadro de Avisos"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="25dp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
             <LinearLayout
                 android:id="@+id/LinearLayout1Article"
@@ -49,245 +51,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="MissingConstraints">
-
-                <TextView
-                    android:layout_width="244dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="10dp"
-                    android:text="Titulo da Materia"
-                    android:textColor="@color/white"
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="244dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="10dp"
-                    android:text="BlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBla"
-                    android:textColor="@color/white"
-                    android:textSize="12dp" />
-
-                <TextView
-                    android:layout_width="244dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="10dp"
-                    android:text="Leia mais"
-                    android:textAlignment="center"
-                    android:textColor="@color/lightBlue"
-                    android:textSize="12dp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/LinearLayout2Article"
-                android:layout_width="260dp"
-                android:layout_height="80dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/athletic_newswall_linearlayout"
-                android:clickable="true"
-                android:focusable="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="MissingConstraints">
-
-                <TextView
-                    android:layout_width="244dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="10dp"
-                    android:text="Titulo da Materia"
-                    android:textColor="@color/white"
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="244dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="10dp"
-                    android:text="BlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBla"
-                    android:textColor="@color/white"
-                    android:textSize="12dp" />
-
-                <TextView
-                    android:layout_width="244dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="10dp"
-                    android:text="Leia mais"
-                    android:textAlignment="center"
-                    android:textColor="@color/lightBlue"
-                    android:textSize="12dp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/LinearLayout3Article"
-                android:layout_width="260dp"
-                android:layout_height="80dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/athletic_newswall_linearlayout"
-                android:clickable="true"
-                android:focusable="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="MissingConstraints">
-
-                <TextView
-                    android:layout_width="244dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="10dp"
-                    android:text="Titulo da Materia"
-                    android:textColor="@color/white"
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="244dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="10dp"
-                    android:text="BlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBla"
-                    android:textColor="@color/white"
-                    android:textSize="12dp" />
-
-                <TextView
-                    android:layout_width="244dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="10dp"
-                    android:text="Leia mais"
-                    android:textAlignment="center"
-                    android:textColor="@color/lightBlue"
-                    android:textSize="12dp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/LinearLayout4Article"
-                android:layout_width="260dp"
-                android:layout_height="80dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/athletic_newswall_linearlayout"
-                android:clickable="true"
-                android:focusable="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <TextView
-                    android:layout_width="244dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="10dp"
-                    android:text="Titulo da Materia"
-                    android:textColor="@color/white"
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="244dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="10dp"
-                    android:text="BlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBla"
-                    android:textColor="@color/white"
-                    android:textSize="12dp" />
-
-                <TextView
-                    android:layout_width="244dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="10dp"
-                    android:text="Leia mais"
-                    android:textAlignment="center"
-                    android:textColor="@color/lightBlue"
-                    android:textSize="12dp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/LinearLayout5Article"
-                android:layout_width="260dp"
-                android:layout_height="80dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/athletic_newswall_linearlayout"
-                android:clickable="true"
-                android:focusable="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="MissingConstraints">
-
-                <TextView
-                    android:layout_width="244dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="10dp"
-                    android:text="Titulo da Materia"
-                    android:textColor="@color/white"
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="244dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="10dp"
-                    android:text="BlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBla"
-                    android:textColor="@color/white"
-                    android:textSize="12dp" />
-
-                <TextView
-                    android:layout_width="244dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="10dp"
-                    android:text="Leia mais"
-                    android:textAlignment="center"
-                    android:textColor="@color/lightBlue"
-                    android:textSize="12dp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/LinearLayout6Article"
-                android:layout_width="260dp"
-                android:layout_height="80dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
-                android:background="@drawable/athletic_newswall_linearlayout"
-                android:clickable="true"
-                android:focusable="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
                     android:layout_width="244dp"

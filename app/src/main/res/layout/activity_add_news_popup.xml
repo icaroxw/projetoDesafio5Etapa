@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="500dp"
+    android:layout_gravity="center"
+    android:layout_marginTop="60dp"
+    android:layout_marginBottom="60dp"
+    android:background="@drawable/aboutpopupbackground">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Adicionar noticias"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="10dp"
+            android:text="⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯"
+            android:textColor="@color/white"
+            android:textSize="13dp" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/TextInputEditTexttitlePopupAddNews"
+            android:layout_width="264dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="18dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/container_edit_text_login"
+            android:backgroundTint="@color/lightBlack"
+            android:hint="Digite o Título"
+            android:inputType="text"
+            android:maxLength="80"
+            android:padding="12dp"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:textColorHint="@color/grey"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/TextInputEditTextBodyPopupAddNews"
+            android:layout_width="264dp"
+            android:layout_height="160dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/container_edit_text_login"
+            android:backgroundTint="@color/lightBlack"
+            android:gravity="top|start"
+            android:hint="Digite a notícia\n"
+            android:inputType="textMultiLine"
+            android:maxLength="600"
+            android:maxLines="7"
+            android:padding="12dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/grey"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/checkboxAthleticNewswall"
+            android:layout_width="180dp"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginTop="20dp"
+            android:text="Notícias da Atlética"
+            android:textColor="@color/white"
+            android:theme="@style/colored_checkBox" />
+
+        <CheckBox
+            android:id="@+id/checkboxUsersNewswall"
+            android:layout_width="180dp"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginTop="8dp"
+            android:text="Notícias dos Usuários"
+            android:textColor="@color/white"
+            android:theme="@style/colored_checkBox" />
+
+        <Button
+            android:id="@+id/buttonSendAddNewsPopup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_style_login"
+            android:padding="5dp"
+            android:text="Enviar"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="22dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

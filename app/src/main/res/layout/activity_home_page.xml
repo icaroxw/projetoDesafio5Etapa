@@ -102,9 +102,9 @@
                     android:textColor="@color/lightBlue"
                     android:textSize="15dp"
                     android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="@+id/containerLogin"
-                    app:layout_constraintEnd_toEndOf="@id/containerLogin"
-                    app:layout_constraintStart_toStartOf="@id/containerLogin" />
+                    app:layout_constraintBottom_toBottomOf="@+id/containerProfileEdit"
+                    app:layout_constraintEnd_toEndOf="@id/containerProfileEdit"
+                    app:layout_constraintStart_toStartOf="@id/containerProfileEdit" />
             </FrameLayout>
 
             <FrameLayout
@@ -158,9 +158,9 @@
                     android:textColor="@color/lightBlue"
                     android:textSize="15dp"
                     android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="@+id/containerLogin"
-                    app:layout_constraintEnd_toEndOf="@id/containerLogin"
-                    app:layout_constraintStart_toStartOf="@id/containerLogin" />
+                    app:layout_constraintBottom_toBottomOf="@+id/containerProfileEdit"
+                    app:layout_constraintEnd_toEndOf="@id/containerProfileEdit"
+                    app:layout_constraintStart_toStartOf="@id/containerProfileEdit" />
             </FrameLayout>
 
         </LinearLayout>
@@ -210,8 +210,8 @@
 
             </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/LinearLayoutHomePageKits"
+            <FrameLayout
+                android:id="@+id/FrameLayoutHomeAddNews"
                 android:layout_width="150dp"
                 android:layout_height="180dp"
                 android:layout_marginStart="20dp"
@@ -220,24 +220,28 @@
                 android:focusable="true"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:gravity="center_horizontal"
-                android:orientation="vertical">
+                tools:ignore="MissingConstraints">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="95dp"
+                    android:layout_marginTop="5dp"
                     android:scaleType="centerInside"
-                    android:src="@drawable/baseline_shopping_bag_24_home_page" />
+                    android:src="@drawable/newswallpng" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Kits"
+                    android:text="Adicionar notícias"
                     android:textAlignment="center"
+                    android:layout_marginBottom="17dp"
                     android:textColor="@color/white"
                     android:textSize="25dp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:layout_gravity="bottom|center_horizontal" />
 
-            </LinearLayout>
+            </FrameLayout>
+
 
             <LinearLayout
                 android:id="@+id/LinearLayoutHomePageCuponsAndPartnerships"
